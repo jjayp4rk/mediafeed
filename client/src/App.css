@@ -4,12 +4,33 @@ img {
 
 .landing {
   position: relative;
-  background: url('./img/showcase.jpg') no-repeat;
+  background: url("./img/HexaTiles.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
   margin-top: -24px;
   margin-bottom: -50px;
+}
+
+.landing .dark-overlay {
+  background-color: transparent;
+}
+
+.landing-container {
+  padding-top: 120px;
+  text-align: center;
+  color: black;
+}
+
+.landing-container h1 {
+  font-size: 54px;
+}
+
+.landing-container .lead {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
 }
 
 .landing-inner {
@@ -36,4 +57,18 @@ img {
 
 .form-control::placeholder {
   color: #bbb !important;
+}
+
+.btn-info {
+  background-color: #363537;
+  border-color: #363537;
+}
+
+.btn-info:hover {
+  background-color: rgba(0, 0, 0, 1);
+  border-color: rgba(0, 0, 0, 1);
+}
+
+.btn-light {
+  background-color: white;
 }
