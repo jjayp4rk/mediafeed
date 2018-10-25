@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-import { addPost } from '../../actions/postActions';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { addPost } from "../../actions/postActions";
+import classnames from "classnames";
 
 class PostForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: '',
+      text: "",
       errors: {}
     };
 
@@ -34,32 +34,34 @@ class PostForm extends Component {
     };
 
     this.props.addPost(newPost);
-    this.setState({ text: '' });
+    this.setState({ text: " " });
   }
 
-  onChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
+  onChange(e, value) {
+    this.setState({ text: value });
   }
 
   render() {
     const { errors } = this.state;
 
     return (
-      <div className="post-form mb-3">
-        <div className="card card-info">
-          <div className="card-header bg-info text-white">Say Somthing...</div>
+      <div className="post-form">
+        <div className="card mb-1">
+          <div className="card-header">Say Somthing...</div>
           <div className="card-body">
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
-                <TextAreaFieldGroup
-                  placeholder="Create a post"
-                  name="text"
-                  value={this.state.text}
-                  onChange={this.onChange}
-                  error={errors.text}
-                />
+                <div className="form-group">
+                  <textarea
+                    className="form-control form-control-lg"
+                    placeholder="Create a post"
+                    name="text"
+                    value={this.state.text}
+                    onChange={this.onChange}
+                  />
+                </div>
               </div>
-              <button type="submit" className="btn btn-dark">
+              <button type="submit" className="btn btn-primary">
                 Submit
               </button>
             </form>
@@ -81,4 +83,7 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { addPost })(PostForm);
+export default connect(
+  mapStateToProps,
+  { addPost }
+)(PostForm);

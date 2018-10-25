@@ -2,12 +2,16 @@ img {
   width: 100%;
 }
 
+.App .container {
+  max-width: 100%;
+}
+
 .landing {
   position: relative;
   background: url("./img/HexaTiles.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 90vh;
   margin-top: -24px;
   margin-bottom: -50px;
 }
@@ -23,7 +27,7 @@ img {
 }
 
 .landing-container h1 {
-  font-size: 54px;
+  font-size: 60px;
 }
 
 .landing-container .lead {
@@ -38,7 +42,7 @@ img {
 }
 
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   top: 0;
   left: 0;
@@ -60,8 +64,9 @@ img {
 }
 
 .btn-info {
-  background-color: #363537;
-  border-color: #363537;
+  background-color: #464547;
+  border-color: #464547;
+  width: 120px;
 }
 
 .btn-info:hover {
@@ -69,6 +74,58 @@ img {
   border-color: rgba(0, 0, 0, 1);
 }
 
-.btn-light {
-  background-color: white;
+.dashboard .btn-info {
+  width: 200px;
+}
+
+/* Post-form css */
+
+.post-form .card-header {
+  font-size: 17px;
+  padding: 0.4rem 0.48rem;
+  background-color: #000000;
+}
+
+.post-form .card {
+  background-color: #6c6b6d;
+  color: white;
+}
+
+.post-form .card-body {
+  padding: 0.75rem;
+}
+
+.post-form .card-body .form-group {
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.post-form .btn-primary {
+  padding: 0.2rem 0.4rem;
+  font-size: 15px;
+}
+
+.post-form .form-control {
+  padding: 0.5rem 0.6rem 4rem 0.5rem;
+  font-size: 15px;
+}
+
+/* Post item css */
+
+.post-item {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.post-item .card {
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 13px;
+  padding: 8px 10px;
+}
+
+.post-item .body p {
+  font-size: 14px;
+}
+
+.post-item .body .btn .btn-light {
+  font-size: 10px;
 }
