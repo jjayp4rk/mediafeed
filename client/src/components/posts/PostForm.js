@@ -37,8 +37,8 @@ class PostForm extends Component {
     this.setState({ text: " " });
   }
 
-  onChange(e, value) {
-    this.setState({ text: value });
+  onChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   render() {
@@ -47,7 +47,7 @@ class PostForm extends Component {
     return (
       <div className="post-form">
         <div className="card mb-1">
-          <div className="card-header">Say Somthing...</div>
+          <div className="card-header">Make a post</div>
           <div className="card-body">
             <form onSubmit={this.onSubmit}>
               <div className="form-group">

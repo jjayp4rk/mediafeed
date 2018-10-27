@@ -3,10 +3,12 @@ import {
   GET_POSTS,
   GET_POST,
   DELETE_POST,
-  POST_LOADING
-} from '../actions/types';
+  POST_LOADING,
+  GET_NEWS
+} from "../actions/types";
 
 const initialState = {
+  news: [],
   posts: [],
   post: {},
   loading: false
@@ -40,6 +42,12 @@ export default function(state = initialState, action) {
       return {
         ...state,
         posts: state.posts.filter(post => post._id !== action.payload)
+      };
+    case GET_NEWS:
+      return {
+        ...state,
+        news: action.payload.articles,
+        loading: false
       };
     default:
       return state;

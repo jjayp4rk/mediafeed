@@ -1,4 +1,5 @@
-import axios from 'axios';
+import axios from "axios";
+import moment from "moment";
 
 import {
   ADD_POST,
@@ -7,14 +8,17 @@ import {
   GET_POSTS,
   GET_POST,
   POST_LOADING,
-  DELETE_POST
-} from './types';
+  DELETE_POST,
+  GET_NEWS
+} from "./types";
+
+const NewsApiKey = require("../config/newsApiKey").apiKey;
 
 // Add Post
 export const addPost = postData => dispatch => {
   dispatch(clearErrors());
   axios
-    .post('/api/posts', postData)
+    .post("/api/posts", postData)
     .then(res =>
       dispatch({
         type: ADD_POST,
@@ -33,7 +37,7 @@ export const addPost = postData => dispatch => {
 export const getPosts = () => dispatch => {
   dispatch(setPostLoading());
   axios
-    .get('/api/posts')
+    .get("/api/posts")
     .then(res =>
       dispatch({
         type: GET_POSTS,
@@ -137,6 +141,28 @@ export const deleteComment = (postId, commentId) => dispatch => {
     .then(res =>
       dispatch({
         type: GET_POST,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
+
+// Get news
+export const getNews = () => dispatch => {
+  dispatch(setPostLoading());
+  const date = moment(new Date()).format("YYYY-MM-DD");
+  axios
+    .get(
+      `https://newsapi.org/v2/top-headlines?q=tech&from=${date}&to=${date}&sortBy=popularity&apiKey=${NewsApiKey}`
+    )
+    .then(res =>
+      dispatch({
+        type: GET_NEWS,
         payload: res.data
       })
     )

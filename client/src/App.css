@@ -1,3 +1,40 @@
+.dark {
+  --bg: #222831;
+  --bg2: rgba(0, 0, 0, 0.3);
+  --bg3: #1a1d24;
+  --bg4: black;
+  --footer-bg: rgba(0, 0, 0, 0.3);
+  --code: #f59bac;
+  --code-text: #fad7a0;
+  --code-text: #fee6c0;
+  --code-comment: #81899b;
+  --text-color: #f9ffee;
+  --pale-text: #dfa612;
+  --info-box-text: antiquewhite;
+  --gs0: rgba(239, 187, 53, 0.6);
+  --gs1: rgba(239, 187, 53, 0.6);
+  --green1: #efbb35;
+  --green2: #e84279;
+  --green3: #dfa612;
+  --top1: #302e24;
+  --top2: #28313e;
+  --subtle-green1: rgba(236, 198, 48, 0.1);
+  --subtle-green2: #1a1d24;
+  --subtle-yellow3: rgba(236, 198, 48, 0.1);
+  --fb: #fff;
+  --reddit: #fff;
+  --h-news: #fff;
+  --twitter: #fff;
+  --cat-head: #1a1d24;
+  --front-text-color: antiquewhite;
+  --info-box-bg: #1a1d24;
+  --yellow1: #efbb35;
+  --yellow2: #dfa612;
+  --yellow3: #fae042;
+  --subtle: rgba(0, 0, 0, 0.1);
+  --very-subtle: rgba(0, 0, 0, 0.05);
+}
+
 img {
   width: 100%;
 }
@@ -5,12 +42,43 @@ img {
 .App .container {
   max-width: 100%;
 }
+/* Navbar css */
+.navbar {
+  /* box-shadow: 0 2px 20px 0 #efbb35; */
+  background: linear-gradient(to right, #302e24, #28313e);
+  font-size: 14px;
+}
 
+.navbar .navbar-brand {
+  font-size: 16px;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+}
+
+.navbar a:hover {
+  color: rgba(223, 222, 222, 0.92);
+}
+
+/* Footer css */
+
+footer {
+  background: linear-gradient(to left, #302e24, #28313e);
+  color: white;
+  font-size: 16px;
+}
+
+/* Landing css */
 .landing {
   position: relative;
-  background: url("./img/HexaTiles.jpg") no-repeat;
+  /* background: url("./img/HexaTiles.jpg") no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
+  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", Courier, monospace;
+  font-style: italic;
   height: 90vh;
   margin-top: -24px;
   margin-bottom: -50px;
@@ -23,7 +91,7 @@ img {
 .landing-container {
   padding-top: 120px;
   text-align: center;
-  color: black;
+  color: white;
 }
 
 .landing-container h1 {
@@ -42,7 +110,6 @@ img {
 }
 
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   top: 0;
   left: 0;
@@ -59,31 +126,68 @@ img {
   height: 40px;
 }
 
-.form-control::placeholder {
-  color: #bbb !important;
-}
+/* Button info class css */
 
 .btn-info {
-  background-color: #464547;
-  border-color: #464547;
-  width: 120px;
+  background-color: transparent;
+  border: 2px dashed #fae042;
+  width: 150px;
+  height: 70px;
+  border-radius: 0px;
+
+  padding-top: 19px;
+  color: white;
+  font-style: normal;
 }
 
 .btn-info:hover {
-  background-color: rgba(0, 0, 0, 1);
-  border-color: rgba(0, 0, 0, 1);
+  background-color: transparent;
+  color: #fae042;
+  border-color: #fae042;
 }
 
 .dashboard .btn-info {
   width: 200px;
 }
 
+/* Login css */
+
+.login .container {
+  height: 85vh;
+}
+
+.login .container .row {
+  position: relative;
+  top: 20%;
+}
+
+.login .container .btn-info {
+  font-size: 22px;
+  padding-top: 9px;
+  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", Courier, monospace;
+}
+
+.login .container .form-control {
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 2px solid #1a1d24;
+}
+
+.login .container .form-control:focus {
+  color: white;
+  outline: none;
+  border-bottom: 2px solid #e84279;
+  box-shadow: none;
+}
+
 /* Post-form css */
 
 .post-form .card-header {
   font-size: 17px;
-  padding: 0.4rem 0.48rem;
-  background-color: #000000;
+  padding: 0.1rem 0.42rem;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .post-form .card {
@@ -92,17 +196,19 @@ img {
 }
 
 .post-form .card-body {
-  padding: 0.75rem;
+  padding: 0.35rem;
 }
 
 .post-form .card-body .form-group {
   margin-bottom: 8px;
   text-decoration: none;
+  border-radius: 5px;
 }
 
 .post-form .btn-primary {
   padding: 0.2rem 0.4rem;
   font-size: 15px;
+  background-color: green;
 }
 
 .post-form .form-control {
@@ -126,6 +232,23 @@ img {
   font-size: 14px;
 }
 
-.post-item .body .btn .btn-light {
+/* News content css */
+.news-content {
+  display: flex;
+  flex-flow: row wrap;
+}
+/* News item css */
+.news-item {
+  max-width: 370px;
+  margin: 14px;
+}
+
+.news-item .card .card-body .card-title h3 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.news-item .card .card-body .card-title h5 {
   font-size: 10px;
+  font-weight: bold;
 }
