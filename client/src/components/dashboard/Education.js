@@ -33,8 +33,8 @@ class Education extends Component {
       </tr>
     ));
     return (
-      <div>
-        <h4 className="mb-4">Education Credentials</h4>
+      <div className="dashboard-table">
+        <h4 className="mb-3">Education Credentials</h4>
         <table className="table">
           <thead>
             <tr>
@@ -55,4 +55,7 @@ Education.propTypes = {
   deleteEducation: PropTypes.func.isRequired
 };
 
-export default connect(null, { deleteEducation })(Education);
+export default connect(
+  null,
+  { deleteEducation }
+)(Education);

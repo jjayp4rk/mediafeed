@@ -33,8 +33,8 @@ class Experience extends Component {
       </tr>
     ));
     return (
-      <div>
-        <h4 className="mb-4">Experience Credentials</h4>
+      <div className="dashboard-table">
+        <h4 className="mb-3">Experience Credentials</h4>
         <table className="table">
           <thead>
             <tr>
@@ -55,4 +55,7 @@ Experience.propTypes = {
   deleteExperience: PropTypes.func.isRequired
 };
 
-export default connect(null, { deleteExperience })(Experience);
+export default connect(
+  null,
+  { deleteExperience }
+)(Experience);

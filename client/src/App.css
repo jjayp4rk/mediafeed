@@ -76,8 +76,8 @@ footer {
   /* background: url("./img/HexaTiles.jpg") no-repeat;
   background-size: cover;
   background-position: center; */
-  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
-    "Bitstream Vera Sans Mono", Courier, monospace;
+  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
+    'Bitstream Vera Sans Mono', Courier, monospace;
   font-style: italic;
   height: 90vh;
   margin-top: -24px;
@@ -126,7 +126,7 @@ footer {
   height: 40px;
 }
 
-/* Button info class css */
+/* Button class css */
 
 .btn-info {
   background-color: transparent;
@@ -136,18 +136,138 @@ footer {
   border-radius: 0px;
 
   padding-top: 19px;
-  color: white;
+  color: #fae042;
   font-style: normal;
 }
 
 .btn-info:hover {
   background-color: transparent;
-  color: #fae042;
-  border-color: #fae042;
+  color: #dfa612;
+  border-color: #dfa612;
+}
+
+.btn-danger {
+  padding: 0.22rem;
+  font-size: 12px;
+}
+
+.btn-light {
+  border: 2px dashed #e84279;
+  border-radius: 0px;
+  background-color: transparent;
+  color: #e84279;
+}
+
+.btn-light:hover {
+  background-color: transparent;
+  border: 2px dashed #e84279;
+  border-radius: 0px;
+  color: #e8427986;
+}
+
+/* Input, form-control css */
+
+.container .form-control {
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 2px solid #1a1d24;
+}
+
+.container .form-control:focus {
+  color: white;
+  outline: none;
+  border-bottom: 2px solid #e84279;
+  box-shadow: none;
+}
+
+/* Dashboard css */
+
+.dashboard {
+  min-height: 87vh;
+}
+
+.dashboard h1 {
+  font-style: italic;
+}
+
+.dashboard a {
+  color: #e84279;
+}
+
+.dashboard a:hover {
+  border-bottom: 1px;
 }
 
 .dashboard .btn-info {
   width: 200px;
+}
+
+.dashboard .btn {
+  border: 1px solid #e84279;
+  min-width: 150px;
+}
+
+.dashboard .btn:hover {
+  border: 1px solid #e84279;
+}
+
+.dashboard .btn-lg {
+  border: 2px dashed #e84279;
+  border-radius: 0px;
+}
+
+.dashboard .btn-lg:hover {
+  border: 2px dashed #e84279;
+  border-radius: 0px;
+  color: #e8427986;
+}
+
+.dashboard-table .table {
+  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
+    'Bitstream Vera Sans Mono', Courier, monospace;
+}
+
+.dashboard-table .table th {
+  border-bottom: 2px solid #dfa612;
+  border-top: 1px dashed #dfa612;
+}
+
+.dashboard-table .table td {
+  border-top: 1px dashed #dfa612;
+}
+
+.dashboard-table .mb-3 {
+  font-style: italic;
+  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
+    'Bitstream Vera Sans Mono', Courier, monospace;
+}
+
+.dashboard-table .table .btn-danger {
+  min-width: 120px;
+  font-weight: bold;
+}
+
+.dashboard .delete-account {
+  min-width: 150px;
+  font-size: 16px;
+  padding-bottom: 8px;
+}
+
+/* Sign up/Register css */
+
+.register .container .form-control {
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 2px solid #1a1d24;
+}
+
+.register .container .form-control:focus {
+  color: white;
+  outline: none;
+  border-bottom: 2px solid #e84279;
+  box-shadow: none;
 }
 
 /* Login css */
@@ -164,8 +284,8 @@ footer {
 .login .container .btn-info {
   font-size: 22px;
   padding-top: 9px;
-  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
-    "Bitstream Vera Sans Mono", Courier, monospace;
+  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
+    'Bitstream Vera Sans Mono', Courier, monospace;
 }
 
 .login .container .form-control {
@@ -180,6 +300,53 @@ footer {
   outline: none;
   border-bottom: 2px solid #e84279;
   box-shadow: none;
+}
+
+/* Create profile page css */
+
+.create-profile .container .form-control {
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 2px solid #1a1d24;
+}
+
+.create-profile .container .form-control:focus {
+  color: white;
+  outline: none;
+  border-bottom: 2px solid #e84279;
+  box-shadow: none;
+}
+
+.create-profile .container h1 {
+  font-style: italic;
+}
+
+.create-profile .container .form-group select {
+  background-color: #1a1d24;
+}
+
+.create-profile .container .btn-info {
+  font-size: 22px;
+  padding-top: 9px;
+  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
+    'Bitstream Vera Sans Mono', Courier, monospace;
+}
+
+.create-profile .container .btn-light {
+  border: 2px dashed #e84279;
+  border-radius: 0px;
+  background-color: transparent;
+  color: #e84279;
+}
+
+/* Add credentials css */
+
+.add-credential .container .btn-info {
+  font-size: 22px;
+  padding-top: 9px;
+  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
+    'Bitstream Vera Sans Mono', Courier, monospace;
 }
 
 /* Post-form css */
