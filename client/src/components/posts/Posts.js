@@ -29,11 +29,12 @@ class Posts extends Component {
       <div className="post-feed">
         <div className="container">
           <div className="row">
-            <div className="col-md-3">
+            <div className="col-md-4">
               <PostForm />
               {postContent}
             </div>
-            <div className="col-md-9">
+            <div className="col-md-8">
+              <h1>Tech News</h1>
               <div className="news-content">{newsContent}</div>
             </div>
           </div>

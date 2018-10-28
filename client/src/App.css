@@ -76,8 +76,8 @@ footer {
   /* background: url("./img/HexaTiles.jpg") no-repeat;
   background-size: cover;
   background-position: center; */
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-    'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", Courier, monospace;
   font-style: italic;
   height: 90vh;
   margin-top: -24px;
@@ -91,7 +91,7 @@ footer {
 .landing-container {
   padding-top: 120px;
   text-align: center;
-  color: white;
+  color: #fee6c0;
 }
 
 .landing-container h1 {
@@ -189,6 +189,7 @@ footer {
 
 .dashboard h1 {
   font-style: italic;
+  font-weight: 200;
 }
 
 .dashboard a {
@@ -224,8 +225,8 @@ footer {
 }
 
 .dashboard-table .table {
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-    'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", Courier, monospace;
 }
 
 .dashboard-table .table th {
@@ -239,8 +240,8 @@ footer {
 
 .dashboard-table .mb-3 {
   font-style: italic;
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-    'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", Courier, monospace;
 }
 
 .dashboard-table .table .btn-danger {
@@ -255,6 +256,19 @@ footer {
 }
 
 /* Sign up/Register css */
+
+.register .container {
+  width: 60%;
+  height: 85vh;
+  padding-top: 17vh;
+}
+
+.register .container .btn-info {
+  font-size: 22px;
+  padding-top: 9px;
+  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", Courier, monospace;
+}
 
 .register .container .form-control {
   background-color: transparent;
@@ -284,8 +298,8 @@ footer {
 .login .container .btn-info {
   font-size: 22px;
   padding-top: 9px;
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-    'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", Courier, monospace;
 }
 
 .login .container .form-control {
@@ -329,8 +343,8 @@ footer {
 .create-profile .container .btn-info {
   font-size: 22px;
   padding-top: 9px;
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-    'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", Courier, monospace;
 }
 
 .create-profile .container .btn-light {
@@ -345,21 +359,27 @@ footer {
 .add-credential .container .btn-info {
   font-size: 22px;
   padding-top: 9px;
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
-    'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", Courier, monospace;
 }
 
 /* Post-form css */
 
+.post-form {
+  margin-bottom: 10px;
+}
+
 .post-form .card-header {
   font-size: 17px;
-  padding: 0.1rem 0.42rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.1rem 0.1rem;
+  background: linear-gradient(to right, #302e24, #28313e);
+  text-align: center;
+  border-bottom: 1px dashed #e84279;
 }
 
 .post-form .card {
-  background-color: #6c6b6d;
-  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #e84279;
 }
 
 .post-form .card-body {
@@ -372,10 +392,17 @@ footer {
   border-radius: 5px;
 }
 
+.post-form .card-body .form-control {
+  color: #efbb35;
+}
+
 .post-form .btn-primary {
   padding: 0.2rem 0.4rem;
   font-size: 15px;
-  background-color: green;
+  background-color: transparent;
+  border-radius: 0px;
+  border: 1px dashed #efbb35;
+  color: #efbb35;
 }
 
 .post-form .form-control {
@@ -385,37 +412,166 @@ footer {
 
 /* Post item css */
 
-.post-item {
-  background-color: rgba(0, 0, 0, 0.3);
+.post-item .post-content {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.post-item .card img {
+  width: 20%;
 }
 
 .post-item .card {
-  background-color: rgba(0, 0, 0, 0.3);
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 25px,
+    rgba(223, 166, 18, 0.1) 25px,
+    rgba(223, 166, 18, 0.1) 50px
+  );
   font-size: 13px;
   padding: 8px 10px;
+  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", Courier, monospace;
+}
+
+.post-item .card-body .head .card-text {
+  font-style: italic;
+  font-size: 14.5px;
 }
 
 .post-item .body p {
   font-size: 14px;
 }
 
+.post-item .body .btn-light {
+  color: white;
+  min-width: 50px;
+  max-width: 50px;
+}
+
+.post-item .body .btn-info {
+  height: 40px;
+  padding-top: 5px;
+}
+
+.post-item .btn-danger {
+  height: 40px;
+  width: 40px;
+}
+
 /* News content css */
 .news-content {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: wrap;
+  align-content: flex-start;
 }
 /* News item css */
 .news-item {
-  max-width: 370px;
-  margin: 14px;
+  min-width: 280px;
+  max-width: 43%;
+  margin: 10px;
+}
+
+.news-item .card {
+  border-radius: 0px;
+  border: none;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 25px,
+    rgba(223, 166, 18, 0.1) 25px,
+    rgba(223, 166, 18, 0.1) 50px
+  );
 }
 
 .news-item .card .card-body .card-title h3 {
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: 0;
+  font-style: italic;
+  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", Courier, monospace;
+  border-bottom: 2px solid;
+  border-color: rgba(239, 187, 53, 0.5);
 }
 
-.news-item .card .card-body .card-title h5 {
-  font-size: 10px;
-  font-weight: bold;
+.news-item .card .card-top-img {
+  border-radius: 0px;
+}
+
+.news-item .card .card-body {
+  padding: 10px;
+}
+
+.news-item .card .card-body .card-text {
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Post feed */
+
+.post-feed .container .col-md-8 h1 {
+  font-family: "IBM Plex Mono ExtraLight", "Segoe UI", "Helvetica Neue",
+    Helvetica, Roboto, "Open Sans", FreeSans, sans-serif;
+  /* font-weight: 0px; */
+  font-style: italic;
+  font-weight: 200;
+}
+
+/* Profiles */
+
+.profiles h1 {
+  font-style: italic;
+  font-family: "IBM Plex Mono ExtraLight", "Segoe UI", "Helvetica Neue",
+    Helvetica, Roboto, "Open Sans", FreeSans, sans-serif;
+  font-weight: 200;
+}
+
+/* Profile items css */
+
+.profile-item .card-body .avatar-img {
+  padding-top: 16px;
+}
+
+.profile-item .card-body {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 25px,
+    rgba(223, 166, 18, 0.1) 25px,
+    rgba(223, 166, 18, 0.1) 50px
+  );
+  border: 1px solid rgba(223, 166, 18, 0.1);
+  font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", Courier, monospace;
+}
+
+.profile-item .card-body .btn-info {
+  height: 45px;
+  padding-top: 9px;
+}
+
+.profile-item .card-body .dev-info {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.profile-item .card-body .list-group-item {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.profile-header {
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.profile-header h1 {
+  font-style: italic;
+  font-family: "IBM Plex Mono ExtraLight", "Segoe UI", "Helvetica Neue",
+    Helvetica, Roboto, "Open Sans", FreeSans, sans-serif;
+  font-weight: 200;
+}
+
+.profile-header .card {
+  background: linear-gradient(to right, #302e24, #28313e);
 }
