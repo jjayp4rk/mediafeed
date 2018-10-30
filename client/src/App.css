@@ -65,7 +65,8 @@ img {
 /* Footer css */
 
 footer {
-  background: linear-gradient(to left, #302e24, #28313e);
+  background: linear-gradient(-30deg, #cf215be5, #cf215be5 45%, #cf215b 45%)
+    #fff;
   color: white;
   font-size: 16px;
 }
@@ -574,4 +575,79 @@ footer {
 
 .profile-header .card {
   background: linear-gradient(to right, #302e24, #28313e);
+}
+
+.profile-about .card {
+  background-color: transparent;
+  border: none;
+}
+
+.profile-about .card-body h3 {
+  font-family: "IBM Plex Mono ExtraLight", "Segoe UI", "Helvetica Neue",
+    Helvetica, Roboto, "Open Sans", FreeSans, sans-serif;
+  font-style: italic;
+  color: #dfa612;
+  font-weight: 200;
+}
+
+.profile-about .card-body hr {
+  border-color: #dfa612;
+}
+
+.profile-about .card-body {
+  font-family: "IBM Plex Mono ExtraLight", "Segoe UI", "Helvetica Neue",
+    Helvetica, Roboto, "Open Sans", FreeSans, sans-serif;
+}
+
+.profile-about .skill-set {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 25px,
+    rgba(223, 166, 18, 0.1) 25px,
+    rgba(223, 166, 18, 0.1) 50px
+  );
+}
+
+.profile-creds .col-md-6 h3 {
+  font-family: "IBM Plex Mono ExtraLight", "Segoe UI", "Helvetica Neue",
+    Helvetica, Roboto, "Open Sans", FreeSans, sans-serif;
+  font-style: italic;
+  color: #dfa612;
+  font-weight: 200;
+}
+
+.profile-creds .list-group-item {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0px;
+  border: 2px dashed #dfa612;
+  margin-bottom: 10px;
+}
+
+.github-repos .card {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 25px,
+    rgba(223, 166, 18, 0.1) 25px,
+    rgba(223, 166, 18, 0.1) 50px
+  );
+  border: 2px dashed #efbb35;
+  border-radius: 0px;
+}
+
+.github-repos h3 {
+  font-family: "IBM Plex Mono ExtraLight", "Segoe UI", "Helvetica Neue",
+    Helvetica, Roboto, "Open Sans", FreeSans, sans-serif;
+  font-style: italic;
+  color: #dfa612;
+  font-weight: 200;
+}
+.github-repos .card .git-repo-title {
+  color: #efbb35;
+}
+
+.github-repos .card .git-repo-title:hover {
+  color: #dfa612;
+  outline: none;
 }

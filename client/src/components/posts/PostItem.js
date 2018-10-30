@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import classnames from "classnames";
 import { Link } from "react-router-dom";
+import Post from "../post/Post";
 import { deletePost, addLike, removeLike } from "../../actions/postActions";
-import avatar from "../../img/avatarplaceholder.png";
 
 class PostItem extends Component {
   onDeleteClick = (e, id) => {
@@ -74,6 +74,7 @@ class PostItem extends Component {
                     >
                       <i className="text-secondary fas fa-thumbs-down" />
                     </button>
+
                     <Link
                       to={`/post/${post._id}`}
                       className="btn btn-info mr-1"
